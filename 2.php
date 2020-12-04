@@ -19,9 +19,7 @@
         <input name= "num4"><br>
         PRIZE of samomsa:<br>
         <input name= "num5"><br>
-
- 
-    <input type="submit" value="submit">
+        <input type="submit" value="submit">
     </form>
     
 </body>
@@ -36,6 +34,7 @@
   $VP=$_POST['num4'];
   $SP=$_POST['num5'];
   if($SP>=$VP)
+  //samosapav
 {
     $a1=$samosa*2;
     $a2=$samosa*1;
@@ -45,7 +44,7 @@
     $b1=$vada*2;
     if($bread>=$b1)
     {
-        $b2=$vada*1;
+    $b2=$vada*1;
     $p2=$VP*$vada;
     }
     else{
@@ -62,28 +61,23 @@ else
 {
     $b1=$vada*2;
     $b2=$vada*1;
-    $p2=$VP*$vada;
+    $p1=$VP*$vada;
     $bread=$bread-$b1;
 
     $a1=$samosa*2;
     if($bread>=$a1)
     {
-        $a2=$samosa*1;
+    $a2=$samosa*1;
     $p2=$SP*$samosa;
     }
     else{
         $samosa--;
-
-
         $a1=$samosa*2;
-    $a2=$samosa*1;
-    $p1=$SP*$samosa;
-
-
-    
-    
+        $a2=$samosa*1;
+        $p2=$SP*$samosa;
     }
-    echo "total profit possible is:", $p1+$p2;//maximum profit possible
+    echo "total maximum profit is :";
+    echo $p1+$p2;//maximum profit possible
 
 }
 
